@@ -20,10 +20,10 @@ function generateID($koneksi) {
 
 $idAdmin = generateID($koneksi);
 $namaAdmin = $_POST['namaAdmin'];
-$alamatkaryawan = $_POST['alamatKaryawan'];
-$teleponkaryawan = $_POST['teleponKaryawan'];
 $usernameAdmin = $_POST['usernameAdmin'];
 $passwordAdmin = $_POST['passwordAdmin'];
+$alamatkaryawan = $_POST['alamatKaryawan'];
+$teleponkaryawan = $_POST['teleponkaryawan'];
 
 mysqli_query($koneksi, "INSERT INTO tbadmin VALUES ('$idAdmin', '$namaAdmin', '$usernameAdmin','$passwordAdmin', '$alamatkaryawan', '$teleponkaryawan')");
 

@@ -1,13 +1,15 @@
 <?php
 include 'koneksi.php';
 
-$idkaryawan = $_POST['idkaryawan'];
-$namakaryawan = $_POST['namakaryawan'];
-$alamatkaryawan = $_POST['alamatkaryawan'];
+$idadmin = $_POST['idAdmin'];
+$namaAdmin = $_POST['namaAdmin'];
+$usernameAdmin = $_POST['usernameAdmin'];
+$passwordAdmin = $_POST['passwordAdmin'];
+$alamatKaryawan = $_POST['alamatKaryawan'];
 $teleponkaryawan = $_POST['teleponkaryawan'];
 
-mysqli_query($koneksi, "UPDATE tbkaryawan SET namakaryawan='$namakaryawan', alamatkaryawan='$alamatkaryawan', teleponkaryawan='$teleponkaryawan' WHERE idkaryawan='$idkaryawan'");
+mysqli_query($koneksi, "UPDATE tbAdmin SET namaAdmin='$namaAdmin', usernameAdmin='$usernameAdmin', passwordAdmin='$passwordAdmin', alamatKaryawan'$alamatKaryawan',teleponkaryawan='$teleponkaryawan' WHERE idAdmin='$idAdmin'");
 
-header("location:home.php?page=karyawan");
+header("location:../../home.php?page=karyawan");
 ?>
 
