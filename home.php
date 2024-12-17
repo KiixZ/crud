@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +43,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="home.php?page=beranda">BERANDA</a></li>
                         <li class="nav-item"><a class="nav-link" href="home.php?page=karyawan">KARYAWAN IT</a></li>
@@ -48,6 +55,9 @@
                         <li class="nav-item"><a class="nav-link" href="home.php?page=penjualan">OBAT</a></li>
                         <li class="nav-item"><a class="nav-link" href="home.php?page=penjualan">HASIL PEMBAYARAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="home.php?page=tentang">TENTANG</a></li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>
                     </ul>
                 </div>
             </div>
