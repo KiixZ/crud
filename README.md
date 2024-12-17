@@ -1,6 +1,5 @@
-![logo](https://github.com/user-attachments/assets/2fdcfa5c-8312-4c53-8166-d5080f759053)
-
-CRUD Karyawan adalah aplikasi pengelolaan data karyawan yang mudah digunakan dan efisien. Dibuat dengan bahasa pemrograman PHP dan database MySQL.
+![crud-logo](https://github.com/user-attachments/assets/ffebaa66-d95f-416e-9e85-b1346da72965)
+CRUD RUMAH SAKIT adalah aplikasi pengelolaan data karyawan yang mudah digunakan dan efisien. Dibuat dengan bahasa pemrograman PHP dan database MySQL.
 
 Fitur
 
