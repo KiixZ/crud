@@ -1,5 +1,5 @@
 <?php
-$title = "TENTANG PEMILIK";
+$title = "TENTANG AMIKOM PURWOKERTO HOSPITAL";
 ob_start();
 ?>
 <!DOCTYPE html>

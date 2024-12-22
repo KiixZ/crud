@@ -1,9 +1,9 @@
 <?php
-$title = "DATA KATEGORI";
+$title = "DATA PENDAFTARAN";
 ob_start();
 ?>
 
-<a href="./pages/tambah/tambahkategori.php" class="btn btn-primary mb-3">+ TAMBAH KATEGORI</a>
+<a href="./action/tambah/pendaftaran.php" class="btn btn-primary mb-3">+ TAMBAH KATEGORI</a>
 
 <div class="table-responsive">
     <table class="table table-striped table-bordered">

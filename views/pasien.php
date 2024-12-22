@@ -42,8 +42,8 @@
                         <td><?php echo htmlspecialchars($d['tanggalLahirPasien']); ?></td>
                         <td><?php echo htmlspecialchars($d['telephonePasien']); ?></td>
                         <td>
-                        <a href="pages/edit/pasien.php?idPasien=<?php echo (isset($d['idPasien'])) ? $d['idPasien'] : ''; ?>" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="pages/hapus/pasien.php?idPasien=<?php echo (isset($d['idPasien'])) ? $d['idPasien'] : ''; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
+                        <a href="action/edit/pasien.php?idPasien=<?php echo (isset($d['idPasien'])) ? $d['idPasien'] : ''; ?>" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="action/hapus/pasien.php?idPasien=<?php echo (isset($d['idPasien'])) ? $d['idPasien'] : ''; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
                      </td>
                     </tr>
                     <?php

@@ -1,9 +1,9 @@
 <?php
-$title = "DATA PEMASOK";
+$title = "DATA PEMERIKSAAN";
 ob_start();
 ?>
 
-<a href="./pages/tambah/pemeriksaan.php" class="btn btn-primary mb-3">+ TAMBAH PEMASOK</a>
+<a href="./pages/tambah/pemeriksaan.php" class="btn btn-primary mb-3">+ TAMBAH PEMERIKSAAN</a>
 
 <div class="table-responsive">
     <table class="table table-striped table-bordered">

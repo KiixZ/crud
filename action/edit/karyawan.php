@@ -1,6 +1,8 @@
 <?php
 $title = "EDIT DATA KARYAWAN";
 $page = "karyawan";
+$submitButtonText = "UPDATE";
+$backButtonText = "KEMBALI";
 
 require_once '../../koneksi.php';
 
@@ -51,48 +53,34 @@ if (isset($_GET['id'])) {
     mysqli_stmt_close($stmt);
 }
 
+ob_start();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($title); ?></title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <h2><?php echo htmlspecialchars($title); ?></h2>
-        <?php if (isset($error)) : ?>
-            <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
-        <?php endif; ?>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="needs-validation" novalidate>
-            <input type="hidden" name="idAdmin" value="<?php echo htmlspecialchars($karyawan['idadmin'] ?? ''); ?>">
-            <div class="mb-3">
-                <label for="namaAdmin" class="form-label">Nama Karyawan</label>
-                <input type="text" class="form-control" id="namaAdmin" name="namaAdmin" value="<?php echo htmlspecialchars($karyawan['nama_admin'] ?? ''); ?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="usernameAdmin" class="form-label">Username Karyawan</label>
-                <input type="text" class="form-control" id="usernameAdmin" name="usernameAdmin" value="<?php echo htmlspecialchars($karyawan['username_admin'] ?? ''); ?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="alamatKaryawan" class="form-label">Alamat Karyawan</label>
-                <input type="text" class="form-control" id="alamatKaryawan" name="alamatKaryawan" value="<?php echo htmlspecialchars($karyawan['alamat_karyawan'] ?? ''); ?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="teleponkaryawan" class="form-label">Telepon Karyawan</label>
-                <input type="tel" class="form-control" id="teleponkaryawan" name="teleponkaryawan" value="<?php echo htmlspecialchars($karyawan['telepon_karyawan'] ?? ''); ?>" required>
-            </div>
-            <button type="submit" class="btn btn-primary">UPDATE</button>
-        </form>
+<?php if (isset($error)) : ?>
+    <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+<?php endif; ?>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="needs-validation" novalidate>
+    <input type="hidden" name="idAdmin" value="<?php echo htmlspecialchars($karyawan['idadmin'] ?? ''); ?>">
+    <div class="mb-3">
+        <label for="namaAdmin" class="form-label">Nama Karyawan</label>
+        <input type="text" class="form-control" id="namaAdmin" name="namaAdmin" value="<?php echo htmlspecialchars($karyawan['nama_admin'] ?? ''); ?>" required>
     </div>
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <div class="mb-3">
+        <label for="usernameAdmin" class="form-label">Username Karyawan</label>
+        <input type="text" class="form-control" id="usernameAdmin" name="usernameAdmin" value="<?php echo htmlspecialchars($karyawan['username_admin'] ?? ''); ?>" required>
+    </div>
+    <div class="mb-3">
+        <label for="alamatKaryawan" class="form-label">Alamat Karyawan</label>
+        <input type="text" class="form-control" id="alamatKaryawan" name="alamatKaryawan" value="<?php echo htmlspecialchars($karyawan['alamat_karyawan'] ?? ''); ?>" required>
+    </div>
+    <div class="mb-3">
+        <label for="teleponkaryawan" class="form-label">Telepon Karyawan</label>
+        <input type="tel" class="form-control" id="teleponkaryawan" name="teleponkaryawan" value="<?php echo htmlspecialchars($karyawan['telepon_karyawan'] ?? ''); ?>" required>
+    </div>
 
 <?php
 $content = ob_get_clean();
+$formEnd = '</form>';
 include 'edit_template.php';
 ?>
+

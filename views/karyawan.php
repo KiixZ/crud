@@ -35,8 +35,8 @@ ob_start();
                 <td><?php echo htmlspecialchars($d['alamatKaryawan']); ?></td>
                 <td><?php echo htmlspecialchars($d['teleponkaryawan']); ?></td>
                 <td>
-                    <a href="action/edit/editkaryawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="action/hapus/hapuskaryawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
+                    <a href="action/edit/karyawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="action/hapus/karyawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
                 </td>
             </tr>
             <?php

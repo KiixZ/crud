@@ -1,5 +1,5 @@
 <?php
-$title = "DATA PENJUALAN";
+$title = "DATA OBAT";
 ob_start();
 ?>
 
