@@ -3,7 +3,7 @@ $title = "DATA KARYAWAN";
 ob_start();
 ?>
 
-<a href="./pages/tambah/tambahkaryawan.php" class="btn btn-primary mb-3">+ TAMBAH KARYAWAN</a>
+<a href="./action/tambah/karyawan.php" class="btn btn-primary mb-3">+ TAMBAH KARYAWAN</a>
 
 <div class="table-responsive">
     <table class="table table-striped table-bordered">
@@ -35,7 +35,7 @@ ob_start();
                 <td><?php echo htmlspecialchars($d['alamatKaryawan']); ?></td>
                 <td><?php echo htmlspecialchars($d['teleponkaryawan']); ?></td>
                 <td>
-                    <a href="pages/edit/editkaryawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="action/edit/editkaryawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-warning btn-sm">Edit</a>
                     <a href="action/hapus/hapuskaryawan.php?idAdmin=<?php echo $d['idAdmin']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
                 </td>
             </tr>

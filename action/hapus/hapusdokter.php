@@ -1,13 +1,13 @@
 <?php
 // koneksi database
 include '../../koneksi.php';
-$id = $_GET['idAdmin'];
+$id = $_GET['idDokter'];
 
 if (isset($id)) {
- $query = "DELETE FROM tbadmin WHERE idAdmin = '$id'";
+ $query = "DELETE FROM tbDokter WHERE idDokter = '$id'";
  $hasil = mysqli_query($koneksi, $query);
  if ($hasil) {
- header("Location: ../../home.php?page=karyawan");
+ header("Location: ../../home.php?page=dokter");
  exit;
  } else {
  echo "Gagal menghapus data";

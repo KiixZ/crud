@@ -49,11 +49,11 @@ if (!isset($_SESSION['user_id'])) {
                         <li class="nav-item"><a class="nav-link" href="home.php?page=karyawan">KARYAWAN IT</a></li>
                         <li class="nav-item"><a class="nav-link" href="home.php?page=dokter">DOKTER</a></li>
                         <li class="nav-item"><a class="nav-link" href="home.php?page=pasien">PASIEN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home.php?page=pemasok">PENDAFTARAN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home.php?page=kategori">PEMERIKSAAN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home.php?page=produk">PEMBAYARAN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home.php?page=penjualan">OBAT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home.php?page=penjualan">HASIL PEMBAYARAN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.php?page=pendaftaran">PENDAFTARAN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.php?page=pemeriksaan">PEMERIKSAAN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.php?page=pembayaran">PEMBAYARAN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.php?page=obat">OBAT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.php?page=detail">DETAIL PEMBAYARAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="home.php?page=tentang">TENTANG</a></li>
                     </ul>
                     <ul class="navbar-nav">
@@ -69,38 +69,41 @@ if (!isset($_SESSION['user_id'])) {
                 $page = $_GET['page'];
                 switch ($page) {
                     case 'beranda':
-                        include "pages/beranda.php";
+                        include "views/beranda.php";
                         break;
                     case 'karyawan':
-                        include "pages/tampilkaryawan.php";
+                        include "views/karyawan.php";
                         break;
                     case 'dokter':
-                        include "pages/tampildokter.php";
+                        include "views/dokter.php";
                         break;
                     case 'pasien':
-                        include "pages/tampilpasien.php";
+                        include "views/pasien.php";
                         break;
-                    case 'pemasok':
-                        include "pages/tampilpemasok.php";
+                    case 'pendaftaran':
+                        include "views/pendaftaran.php";
                         break;
-                    case 'kategori':
-                        include "pages/tampilkategori.php";
+                    case 'pemeriksaan':
+                        include "views/pemeriksaan.php";
                         break;
-                    case 'produk':
-                        include "pages/tampilproduk.php";
+                    case 'pembayaran':
+                        include "views/pembayaran.php";
                         break;
-                    case 'penjualan':
-                        include "pages/tampilpenjualan.php";
+                    case 'obat':
+                        include "views/obat.php";
+                        break;
+                    case 'detail':
+                        include "views/detail.php";
                         break;
                     case 'tentang':
-                        include "pages/about.php";
+                        include "views/about.php";
                         break;
                     default:
                         echo "<div class='text-center'><h3>Maaf. Halaman tidak di temukan!</h3></div>";
                         break;
                 }
             } else {
-                include "pages/beranda.php";
+                include "views/beranda.php";
             }
             ?>
         </div>

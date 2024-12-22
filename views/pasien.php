@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="mb-4">DATA PASIEN RUMAH SAKIT AMIKOM PURWOKERTO</h2>
+        <h2 class="mb-4">DATA PASIEN</h2>
         
-        <a href="./pages/tambah/tambahpelanggan.php" class="btn btn-primary mb-3">+ TAMBAH PELANGGAN</a>
+        <a href="./action/tambah/pasien.php" class="btn btn-primary mb-3">+ TAMBAH PELANGGAN</a>
         
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
@@ -42,8 +42,8 @@
                         <td><?php echo htmlspecialchars($d['tanggalLahirPasien']); ?></td>
                         <td><?php echo htmlspecialchars($d['telephonePasien']); ?></td>
                         <td>
-                        <a href="pages/edit/editpasien.php?idPasien=<?php echo (isset($d['idadmin'])) ? $d['idadmin'] : ''; ?>" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="pages/hapus/hapuspasien.php?idPasien=<?php echo (isset($d['idadmin'])) ? $d['idadmin'] : ''; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
+                        <a href="pages/edit/pasien.php?idPasien=<?php echo (isset($d['idPasien'])) ? $d['idPasien'] : ''; ?>" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="pages/hapus/pasien.php?idPasien=<?php echo (isset($d['idPasien'])) ? $d['idPasien'] : ''; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Hapus</a>
                      </td>
                     </tr>
                     <?php

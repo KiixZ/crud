@@ -1,18 +1,18 @@
 <?php
-$title = "DATA KARYAWAN";
+$title = "DATA PASIEN";
 $page = "karyawan";
 ob_start();
 
 include '../../koneksi.php';
-$idAdmin = $_GET['idAdmin'];
+$idPasien = $_GET['idPasien'];
 
-$data = mysqli_query($koneksi, "SELECT * FROM tbadmin WHERE idAdmin='$idAdmin'");
+$data = mysqli_query($koneksi, "SELECT * FROM tbPasien WHERE idPasien='$idPasien'");
 
 if ($data && mysqli_num_rows($data) > 0) {
  $d = mysqli_fetch_array($data);
 ?>
- <form method="post" action="../../action/edit/editkaryawan_aksi.php" class="needs-validation" novalidate>
- <input type="hidden" name="idAdmin" value="<?php echo $d['idAdmin']; ?>">
+ <form method="post" action="../../action/edit/pasien_aksi.php" class="needs-validation" novalidate>
+ <input type="hidden" name="idPasien" value="<?php echo $d['idPasien']; ?>">
 
  <div class="mb-3">
  <label for="namaAdmin" class="form-label">Nama Karyawan</label>
